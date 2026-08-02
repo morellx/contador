@@ -1,0 +1,113 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background-color: transparent;
+  color: #f0e6d2;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* TARJETA PRINCIPAL ESTILO ELDEN RING */
+.overlay-card {
+  width: 230px;
+  background: #000000;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* CRONÓMETRO TOTAL */
+.global-timer-box {
+  text-align: center;
+  background: #080808;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  padding: 6px 0;
+}
+.global-timer-label {
+  font-size: 8px;
+  color: #887d6b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.global-timer-value {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: monospace;
+}
+
+/* CONTENEDOR DE TEXTO (CAMINITO CONDICIONAL > 30 CARACTERES) */
+.boss-name-container {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  background: rgba(212, 175, 55, 0.05);
+  border-left: 2px solid #d4af37;
+  border-right: 2px solid #d4af37;
+  padding: 4px 0;
+  text-align: center;
+}
+.boss-name-static {
+  font-size: 11px;
+  font-weight: bold;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  width: 100%;
+}
+.boss-name-scroll {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+  font-size: 11px;
+  font-weight: bold;
+  color: #d4af37;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+/* SECCIÓN DE ESTADÍSTICAS (MUERTES) */
+.boss-stats-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0a0a;
+  border: 1px solid #1f1f1f;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+.stat-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.stat-label {
+  font-size: 8px;
+  color: #887d6b;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.stat-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff4d4d;
+}

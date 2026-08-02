@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Hardcore Overlay</title>
+  <!-- Socket.io proporcionado por el servidor -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Enlace al CSS en la misma carpeta -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div class="overlay-card">
+    <!-- Cronómetro Global -->
+    <div class="global-timer-box">
+      <div class="global-timer-label">Tiempo Total</div>
+      <div class="global-timer-value" id="global-timer">00:00:00</div>
+    </div>
+
+    <!-- Título Personalizado -->
+    <div class="boss-name-container" id="title-container"></div>
+
+    <!-- Contador de Muertes -->
+    <div class="boss-stats-row">
+      <div class="stat-col">
+        <span class="stat-label">Muertes</span>
+        <span class="stat-value" id="kills-count">0</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enlace al script.js en la misma carpeta -->
+  <script src="/script.js"></script>
+</body>
+</html>
